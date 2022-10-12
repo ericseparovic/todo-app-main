@@ -2,32 +2,49 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <title>Frontend Mentor | Todo app</title>
-
 </head>
 
 <body>
+  <header class="header">
+    <h1 class="header__title">Todo</h1>
+    <div class="header__icon" href="#">
+      <img src="/images/icon-sun.svg" alt="icon-sun" />
+    </div>
+  </header>
 
-  Todo
+  <main class="main">
+    <div class="items">
+      <div class="items__header">
+        <div class="">check</div>
+        <input type="text" name="" id="" />
+      </div>
+      <div class="items__body"></div>
+      <div class="items__footer">
+        <div class="items__footer-count-items">
+          <p><span></span>items left</p>
+        </div>
+        <div class="items__footer-filter">
+          <a href="#">All</a>
+          <a href="#">Active</a>
+          <a href="#">Completed</a>
+        </div>
+        <div class="items__footer-clear">
+          <a href="#">Clear Completed</a>
+        </div>
+      </div>
+    </div>
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
+    <p>Drag and drop to reorder list</p>
+  </main>
 </body>
 
 </html>
