@@ -28,4 +28,26 @@ img {
   display: block;
 }
 
+.header {
+  align-items: center;
+  background-image: url(/images/bg-mobile-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 20rem;
+  justify-content: space-between;
+  padding: 0 2rem 6rem;
+}
+
+.header__title {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 2.8rem;
+}
+
+.header__btn-theme {
+  width: 2.2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
