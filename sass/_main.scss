@@ -1,0 +1,132 @@
+.main {
+    align-items: center;
+    background-color: $VeryDarkBlue;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.items {
+    max-width: 60rem;
+    padding: 0 3rem;
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+}
+
+.items__input-new-task {
+    background-color: $VeryDarkDesaturatedBlue;
+    border-radius: 0.4rem;
+    border: none;
+    color: $DarkGrayishBlue;
+    height: 5.2rem;
+    padding: 1rem 2rem 1rem 5rem;
+    width: 100%;
+    outline: none;
+
+}
+
+
+.items__new-task {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.items__checkbox {
+    border: 2px solid $VeryDarkGrayishBlue;
+    border-radius: 50%;
+    height: 2.3rem;
+    position: absolute;
+    width: 2.3rem;
+    left: 1.5rem;
+}
+
+
+.checkbox {
+    background-image: url(../images/icon-check.svg), $CheckBackground;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.items__task {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.items__delete {
+    background-image: url(../images/icon-cross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $VeryDarkGrayishBlue;
+    cursor: pointer;
+    height: 1.3rem;
+    position: absolute;
+    right: 1.5rem;
+    width: 1.3rem;
+}
+
+
+.items__input-task {
+    background-color: $VeryDarkDesaturatedBlue;
+    border: none;
+    color: $DarkGrayishBlue;
+    height: 5.2rem;
+    padding: 1rem 2rem 1rem 5rem;
+    width: 100%;
+    border-bottom: 1px solid $VeryDarkGrayishBlue;
+    outline: none;
+
+}
+
+
+.items__task {
+    &:first-child {
+        .items__input-task {
+            border-radius: 0.4rem 0.4rem 0 0;
+        }
+
+    }
+}
+
+
+
+.items__footer {
+    background-color: red;
+    border-radius: 0.4rem;
+    padding: 1rem 5rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.items__task-footer {
+    background-color: $VeryDarkDesaturatedBlue;
+    border: none;
+    color: $DarkGrayishBlue;
+    height: 5.2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+
+.items__task-count {
+    font-size: 1.2rem;
+}
+
+.items__task-clear {
+    font-size: 1.2rem;
+    color: $DarkGrayishBlue;
+    text-decoration: none;
+}

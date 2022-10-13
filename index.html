@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header class="header">
     <h1 class="header__title">Todo</h1>
     <div class="header__btn-theme" href="#">
@@ -21,24 +22,41 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main class="main">
     <div class="items">
-      <div class="items__header">
-        <div class="">check</div>
-        <input type="text" name="" id="" />
+      <!-- New Task -->
+      <div class="items__new-task">
+        <label class="items__checkbox"></label>
+        <input class="items__input-new-task" type="text" name="" id="" placeholder="Create a new todo" />
       </div>
-      <div class="items__body"></div>
-      <div class="items__footer">
-        <div class="items__footer-count-items">
-          <p><span></span>items left</p>
+
+      <!-- Tasks -->
+      <div class="items__body">
+        <div class="items__task">
+          <label class="items__checkbox checkbox"></label>
+          <input value="Tarea 1" class="items__input-task" type="text" name="" id="" placeholder="Create a new todo" />
+          <div class="items__delete"></div>
         </div>
+        <div class="items__task">
+          <label class="items__checkbox checkbox"></label>
+          <input value="Tarea 1" class="items__input-task" type="text" name="" id="" placeholder="Create a new todo" />
+          <div class="items__delete"></div>
+        </div>
+        <div class="items__task-footer">
+          <p class="items__task-count"><span>5</span> items left</p>
+          <a class="items__task-clear" href="#">Clear Completed</a>
+        </div>
+      </div>
+
+
+      <!-- Buttons -->
+      <div class="items__footer">
+
         <div class="items__footer-filter">
           <a href="#">All</a>
           <a href="#">Active</a>
           <a href="#">Completed</a>
-        </div>
-        <div class="items__footer-clear">
-          <a href="#">Clear Completed</a>
         </div>
       </div>
     </div>

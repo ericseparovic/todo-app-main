@@ -36,7 +36,7 @@ img {
   display: flex;
   height: 20rem;
   justify-content: space-between;
-  padding: 0 2rem 6rem;
+  padding: 0 3rem 8rem;
 }
 
 .header__title {
@@ -48,6 +48,122 @@ img {
 
 .header__btn-theme {
   width: 2.2rem;
+}
+
+.main {
+  align-items: center;
+  background-color: hsl(235deg, 21%, 11%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.items {
+  max-width: 60rem;
+  padding: 0 3rem;
+  position: absolute;
+  top: 10rem;
+  width: 100%;
+}
+
+.items__input-new-task {
+  background-color: hsl(235deg, 24%, 19%);
+  border-radius: 0.4rem;
+  border: none;
+  color: hsl(234deg, 11%, 52%);
+  height: 5.2rem;
+  padding: 1rem 2rem 1rem 5rem;
+  width: 100%;
+  outline: none;
+}
+
+.items__new-task {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.items__checkbox {
+  border: 2px solid hsl(237deg, 14%, 26%);
+  border-radius: 50%;
+  height: 2.3rem;
+  position: absolute;
+  width: 2.3rem;
+  left: 1.5rem;
+}
+
+.checkbox {
+  background-image: url(../images/icon-check.svg), linear-gradient(hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.items__task {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+}
+
+.items__delete {
+  background-image: url(../images/icon-cross.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: hsl(237deg, 14%, 26%);
+  cursor: pointer;
+  height: 1.3rem;
+  position: absolute;
+  right: 1.5rem;
+  width: 1.3rem;
+}
+
+.items__input-task {
+  background-color: hsl(235deg, 24%, 19%);
+  border: none;
+  color: hsl(234deg, 11%, 52%);
+  height: 5.2rem;
+  padding: 1rem 2rem 1rem 5rem;
+  width: 100%;
+  border-bottom: 1px solid hsl(237deg, 14%, 26%);
+  outline: none;
+}
+
+.items__task:first-child .items__input-task {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.items__footer {
+  background-color: red;
+  border-radius: 0.4rem;
+  padding: 1rem 5rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.items__task-footer {
+  background-color: hsl(235deg, 24%, 19%);
+  border: none;
+  color: hsl(234deg, 11%, 52%);
+  height: 5.2rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.items__task-count {
+  font-size: 1.2rem;
+}
+
+.items__task-clear {
+  font-size: 1.2rem;
+  color: hsl(234deg, 11%, 52%);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
