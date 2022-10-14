@@ -135,12 +135,13 @@ img {
 }
 
 .items__footer {
-  background-color: red;
+  background-color: hsl(235deg, 24%, 19%);
   border-radius: 0.4rem;
   padding: 1rem 5rem;
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
+  justify-content: space-between;
 }
 
 .items__task-footer {
@@ -150,10 +151,10 @@ img {
   height: 5.2rem;
   padding: 1rem 2rem;
   width: 100%;
+  border-radius: 0 0 0.4rem 0.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .items__task-count {
@@ -164,6 +165,45 @@ img {
   font-size: 1.2rem;
   color: hsl(234deg, 11%, 52%);
   text-decoration: none;
+}
+
+.border-bm-last-task {
+  border: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.active__btn-filter {
+  color: hsl(220deg, 98%, 61%);
+}
+
+.items__footer {
+  height: 5.2rem;
+  padding: 1rem 2rem;
+  color: hsl(234deg, 11%, 52%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items__footer-filter-btn {
+  color: hsl(234deg, 11%, 52%);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.items__footer-filter-btn:hover {
+  color: hsl(220deg, 98%, 61%);
+}
+
+.items__footer-filter {
+  word-spacing: 2rem;
+}
+
+.color-text {
+  color: hsl(234deg, 11%, 52%);
 }
 
 /*# sourceMappingURL=style.css.map */

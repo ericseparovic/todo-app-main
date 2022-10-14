@@ -45,6 +45,7 @@
 }
 
 
+// 
 .checkbox {
     background-image: url(../images/icon-check.svg), $CheckBackground;
     background-repeat: no-repeat;
@@ -92,19 +93,21 @@
         .items__input-task {
             border-radius: 0.4rem 0.4rem 0 0;
         }
-
     }
+
+
 }
 
 
 
 .items__footer {
-    background-color: red;
+    background-color: $VeryDarkDesaturatedBlue;
     border-radius: 0.4rem;
     padding: 1rem 5rem;
     display: flex;
     align-items: center;
     margin-top: 1.5rem;
+    justify-content: space-between;
 }
 
 .items__task-footer {
@@ -114,10 +117,10 @@
     height: 5.2rem;
     padding: 1rem 2rem;
     width: 100%;
+    border-radius: 0 0 0.4rem 0.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 0 0 0.4rem 0.4rem;
 }
 
 
@@ -129,4 +132,55 @@
     font-size: 1.2rem;
     color: $DarkGrayishBlue;
     text-decoration: none;
+}
+
+
+// In desktop size the border of the last task is removed and a round border is created
+.border-bm-last-task {
+    border: none;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+// Hide task footer
+.hidden {
+    display: none;
+}
+
+// selected color filter
+.active__btn-filter {
+    color: $BrightBlue;
+}
+
+
+.items__footer {
+    height: 5.2rem;
+    padding: 1rem 2rem;
+    color: $DarkGrayishBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.items__footer-filter-btn {
+    color: $DarkGrayishBlue;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+        color: $BrightBlue;
+    }
+
+
+}
+
+.items__footer-filter {
+
+    word-spacing: 2rem;
+}
+
+
+.color-text {
+    color: $DarkGrayishBlue;
 }
