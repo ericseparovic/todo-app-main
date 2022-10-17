@@ -44,14 +44,16 @@
     left: 1.5rem;
     cursor: pointer;
 
-}
 
-
-// 
-.checkbox {
-    background-image: url(../images/icon-check.svg), $CheckBackground;
-    background-repeat: no-repeat;
-    background-position: center;
+    &:hover {
+        background: $CheckBackground border-box;
+        border: 2px solid transparent;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) padding-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
 }
 
 
@@ -97,7 +99,6 @@
             border-radius: 0.4rem 0.4rem 0 0;
         }
     }
-
 
 }
 

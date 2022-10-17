@@ -114,11 +114,12 @@ img {
   left: 1.5rem;
   cursor: pointer;
 }
-
-.checkbox {
-  background-image: url(../images/icon-check.svg), linear-gradient(hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
-  background-repeat: no-repeat;
-  background-position: center;
+.items__checkbox:hover {
+  background: linear-gradient(hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%)) border-box;
+  border: 2px solid transparent;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .items__task {

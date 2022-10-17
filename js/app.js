@@ -35,7 +35,7 @@ function showTasks(tasks) {
         const { id, description, status } = task;
         html += `
             <div class="items__task">
-                <label class="items__checkbox"></label>
+                <label class="items__checkbox checkbox"></label>
                 <input value="${description}" class="items__input-task" type="text" name="" id="" placeholder="Create a new todo" />
                 <div class="items__delete"></div>
             </div>       
