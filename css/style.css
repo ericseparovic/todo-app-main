@@ -112,6 +112,7 @@ img {
   position: absolute;
   width: 2.3rem;
   left: 1.5rem;
+  cursor: pointer;
 }
 
 .checkbox {
@@ -148,6 +149,7 @@ img {
   width: 100%;
   border-bottom: 1px solid hsl(237deg, 14%, 26%);
   outline: none;
+  cursor: pointer;
 }
 
 .items__task:first-child .items__input-task {
