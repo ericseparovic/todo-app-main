@@ -4,11 +4,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    height: 20rem;
-    justify-content: space-between;
-    padding: 0 3rem 8rem;
-
+    align-items: center;
+    justify-content: center;
+    height: 23rem;
 }
+
+@media (min-width:375px) {
+    .header {
+        align-items: center;
+        background-image: url(/images/bg-desktop-dark.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 
 
 .header__title {

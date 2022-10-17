@@ -2,7 +2,7 @@
     align-items: center;
     background-color: $VeryDarkBlue;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 23rem);
     justify-content: center;
 }
 
@@ -10,7 +10,7 @@
     max-width: 60rem;
     padding: 0 3rem;
     position: absolute;
-    top: 10rem;
+    top: 13rem;
     width: 100%;
 }
 
