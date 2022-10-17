@@ -121,6 +121,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+
+@media (min-width:600px) {
+    .items__task-footer {
+        display: none;
+    }
+
+    .items__task {
+        &:nth-last-child(2) {
+            .items__input-task {
+                border: none;
+                border-radius: 0 0 0.4rem 0.4rem;
+            }
+        }
+
+
+    }
+
 }
 
 
@@ -135,16 +154,16 @@
 }
 
 
-// In desktop size the border of the last task is removed and a round border is created
-.border-bm-last-task {
-    border: none;
-    border-radius: 0 0 0.4rem 0.4rem;
+@media (max-width:600px) {
+    .items__task-clear--hover {
+        display: none;
+    }
+
+    .items__task-count--hover {
+        display: none;
+    }
 }
 
-// Hide task footer
-.hidden {
-    display: none;
-}
 
 // selected color filter
 .active__btn-filter {
@@ -157,7 +176,7 @@
     padding: 1rem 2rem;
     color: $DarkGrayishBlue;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -169,7 +188,7 @@
     font-size: 1.5rem;
 
     &:hover {
-        color: $BrightBlue;
+        color: $LightGrayishBlueHover;
     }
 
 
