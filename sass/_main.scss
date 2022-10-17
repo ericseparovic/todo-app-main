@@ -38,9 +38,9 @@
 .items__checkbox {
     border: 2px solid $VeryDarkGrayishBlue;
     border-radius: 50%;
-    height: 2.3rem;
+    height: 2rem;
     position: absolute;
-    width: 2.3rem;
+    width: 2rem;
     left: 1.5rem;
     cursor: pointer;
 
@@ -64,6 +64,13 @@
     position: relative;
 }
 
+
+.checkbox {
+    background-image: url(../images/icon-check.svg), $CheckBackground;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
 
 
 .items__delete {
