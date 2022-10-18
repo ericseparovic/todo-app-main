@@ -129,7 +129,7 @@ img {
   position: relative;
 }
 
-.checkbox {
+.checkbox-active {
   background-image: url(../images/icon-check.svg), linear-gradient(hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
   background-repeat: no-repeat;
   background-position: center;
@@ -151,13 +151,18 @@ img {
 .items__input-task {
   background-color: hsl(235deg, 24%, 19%);
   border: none;
-  color: hsl(234deg, 11%, 52%);
   height: 5.2rem;
   padding: 1rem 2rem 1rem 5rem;
   width: 100%;
   border-bottom: 1px solid hsl(237deg, 14%, 26%);
   outline: none;
+  color: hsl(234deg, 39%, 85%);
   cursor: pointer;
+}
+
+.items__input-task--active {
+  text-decoration: line-through;
+  color: hsl(234deg, 11%, 52%);
 }
 
 .items__task:first-child .items__input-task {
@@ -191,9 +196,12 @@ img {
   .items__task-footer {
     display: none;
   }
-  .items__task:nth-last-child(2) .items__input-task {
-    border: none;
+  .items__task:nth-last-child(1) .items__input-task {
     border-radius: 0 0 0.4rem 0.4rem;
+    border-bottom: none;
+  }
+  .items__task:nth-child(1) .items__input-task {
+    border-radius: 0.4rem 0.4rem 0 0;
   }
 }
 .items__task-count {
