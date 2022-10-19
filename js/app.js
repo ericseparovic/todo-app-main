@@ -23,8 +23,9 @@ function createNewTask(e) {
     }
 
     tasks = [...tasks, task]
+    const reverseTasks = [...tasks].reverse()
 
-    showTasks(tasks)
+    showTasks(reverseTasks)
     newTaskInput.value = ""
 }
 
