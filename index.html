@@ -37,28 +37,29 @@
       <div id="tasks-div" class="items__body">
       </div>
       <div class="items__task-footer">
-        <p class="items__task-count"><span>5</span> items left</p>
-        <a class="items__task-clear" href="#">Clear Completed</a>
+        <p class="items__task-count"><span id="countItemsMobile">0</span> items left</p>
+        <a id="btn-clear-completed-mobile" class="items__task-clear" href="#">Clear Completed</a>
       </div>
 
       <!-- Buttons -->
       <div class="items__footer">
         <div>
-          <p class="items__task-count items__task-count--hover"><span>5</span> items left</p>
+          <p class="items__task-count items__task-count--hover"><span id="countItemsDesktop">5</span> items left</p>
         </div>
         <div class="items__footer-filter">
-          <a class="items__footer-filter-btn" href="#">All</a>
-          <a class="items__footer-filter-btn" href="#">Active</a>
-          <a class="items__footer-filter-btn" href="#">Completed</a>
+          <a id="btn-filter-all" class="items__footer-filter-btn" href="#">All</a>
+          <a id="btn-filter-active" class="items__footer-filter-btn" href="#">Active</a>
+          <a id="btn-filter-completed" class="items__footer-filter-btn" href="#">Completed</a>
         </div>
         <div>
-          <a class="items__task-clear items__task-clear--hover" href="#">Clear Completed</a>
+          <a id="btn-clear-completed-desktop" class="items__task-clear items__task-clear--hover" href="#">Clear
+            Completed</a>
         </div>
       </div>
     </div>
     </div>
 
-    <p class=" color-text">Drag and drop to reorder list</p>
+    <p class="color-text">Drag and drop to reorder list</p>
   </main>
   <script src="/js/app.js"></script>
 </body>

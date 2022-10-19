@@ -146,6 +146,7 @@ img {
   position: absolute;
   right: 1.5rem;
   width: 1.3rem;
+  padding: 0.8rem;
 }
 
 .items__input-task {
