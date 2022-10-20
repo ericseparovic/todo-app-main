@@ -8,25 +8,23 @@ const btnClearCompletedMobile = document.querySelector(
 );
 const countItemsDesktop = document.querySelector("#countItemsDesktop");
 const countItemsMobile = document.querySelector("#countItemsMobile");
-const btnFilterAll = document.querySelector("#btn-filter-all");
-const btnFilterActive = document.querySelector("#btn-filter-active");
-const btnFileterCompleted = document.querySelector("#btn-filter-completed");
+const btnFilter = document.querySelector("#btn-filter");
+let statusFilter = "all";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", (e) => {
   newTaskInput.addEventListener("keyup", createNewTask);
   tasksDiv.addEventListener("click", taskCompleted);
   tasksDiv.addEventListener("click", deleteTask);
   btnClearCompletedDesktop.addEventListener("click", clearCompleted);
   btnClearCompletedMobile.addEventListener("click", clearCompleted);
-  btnFilterAll.addEventListener("click", filterAll);
-  btnFilterActive.addEventListener("click", filterActive);
-  btnFileterCompleted.addEventListener("click", filterCompleted);
+  btnFilter.addEventListener("click", filter);
 
-  showTasks(tasks);
+  filter(e);
 });
 
 // Craete a new task and save it on an array
 let tasks = [];
+
 function createNewTask(e) {
   const task = {};
 
@@ -57,7 +55,10 @@ function idGenerator() {
 
 // Show tasks in the DOM
 function showTasks(tasks) {
+  // Short reverse task
   const reverseTasks = [...tasks].reverse();
+
+  // Show count items
   showCountActiveTasks(tasks);
 
   let html = "";
@@ -149,9 +150,9 @@ function clearCompleted() {
   showTasks(tasks);
 }
 
+// Get number of active tasks
 function getCountActiveTasks(tasks) {
   let count = 0;
-  console.log(tasks);
   if (tasks === undefined) {
     return count;
   }
@@ -161,26 +162,76 @@ function getCountActiveTasks(tasks) {
       count++;
     }
   });
-  console.log(count);
   return count;
 }
 
+// Shows number of pending tasks
 function showCountActiveTasks(tasks) {
   let count = getCountActiveTasks(tasks);
   countItemsDesktop.innerHTML = count;
   countItemsMobile.innerHTML = count;
 }
 
-function filterAll() {
-  showTasks(tasks);
-}
-
-function filterActive() {
+// Filter active tasks and return their value
+function filterActive(tasks) {
   const tasksActive = tasks.filter((task) => task.status === false);
-  showTasks(tasksActive);
+  return tasksActive;
 }
 
-function filterCompleted() {
+// Filter competed tasks and return their value
+function filterCompleted(tasks) {
   const tasksCompleted = tasks.filter((task) => task.status === true);
-  showTasks(tasksCompleted);
+  return tasksCompleted;
+}
+
+// Filter tasks by their status
+function filter(e) {
+  if (e === undefined || e.type === "DOMContentLoaded") {
+    showTasks(tasks);
+    colorSelectFilter(e);
+    return;
+  }
+
+  if (e.target.id === "all") {
+    showTasks(tasks);
+    colorSelectFilter(e);
+    return;
+  }
+
+  if (e.target.id === "active") {
+    const tasksActive = filterActive(tasks);
+    showTasks(tasksActive);
+    colorSelectFilter(e);
+    return;
+  }
+
+  if (e.target.id === "completed") {
+    const tasksCompleted = filterCompleted(tasks);
+    showTasks(tasksCompleted);
+    colorSelectFilter(e);
+    return;
+  }
+}
+
+// Change the color of the selected filter
+function colorSelectFilter(e) {
+  if (e === undefined || e.type === "DOMContentLoaded") {
+    const btnAll = btnFilter.querySelector("#all");
+    btnAll.classList.add("btn-filter-select--blue");
+    return;
+  }
+
+  const btnsFilter = e.target.parentElement.querySelectorAll(
+    ".items__footer-filter-btn"
+  );
+
+  const btnSelect = e.target.id;
+
+  btnsFilter.forEach((btn) => {
+    if (btn.id === btnSelect) {
+      btn.classList.add("btn-filter-select--blue");
+    } else {
+      btn.classList.remove("btn-filter-select--blue");
+    }
+  });
 }

@@ -6,6 +6,7 @@
 body {
   font-size: 1.8rem;
   font-family: "Josefin Sans", sans-serif;
+  background-color: hsl(235deg, 21%, 11%);
 }
 
 html {
@@ -72,7 +73,6 @@ img {
 
 .main {
   align-items: center;
-  background-color: hsl(235deg, 21%, 11%);
   display: flex;
   height: calc(100vh - 23rem);
   justify-content: center;
@@ -223,10 +223,6 @@ img {
     display: none;
   }
 }
-.active__btn-filter {
-  color: hsl(220deg, 98%, 61%);
-}
-
 .items__footer {
   height: 5.2rem;
   padding: 1rem 2rem;
@@ -245,12 +241,18 @@ img {
   color: hsl(236deg, 33%, 92%);
 }
 
+.btn-filter-select--blue {
+  color: hsl(220deg, 98%, 61%);
+}
+
 .items__footer-filter {
   word-spacing: 2rem;
 }
 
-.color-text {
+.message-footer {
+  margin-top: 4rem;
   color: hsl(234deg, 11%, 52%);
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

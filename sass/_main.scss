@@ -1,6 +1,5 @@
 .main {
     align-items: center;
-    background-color: $VeryDarkBlue;
     display: flex;
     height: calc(100vh - 23rem);
     justify-content: center;
@@ -193,11 +192,6 @@
 
 
 // selected color filter
-.active__btn-filter {
-    color: $BrightBlue;
-}
-
-
 .items__footer {
     height: 5.2rem;
     padding: 1rem 2rem;
@@ -221,12 +215,18 @@
 
 }
 
+.btn-filter-select--blue {
+    color: $BrightBlue;
+}
+
 .items__footer-filter {
 
     word-spacing: 2rem;
 }
 
 
-.color-text {
+.message-footer {
+    margin-top: 4rem;
     color: $DarkGrayishBlue;
+    text-align: center;
 }
