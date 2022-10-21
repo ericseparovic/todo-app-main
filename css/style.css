@@ -6,7 +6,6 @@
 body {
   font-size: 1.8rem;
   font-family: "Josefin Sans", sans-serif;
-  background-color: hsl(235deg, 21%, 11%);
 }
 
 html {
@@ -87,10 +86,8 @@ img {
 }
 
 .items__input-new-task {
-  background-color: hsl(235deg, 24%, 19%);
   border-radius: 0.4rem;
   border: none;
-  color: hsl(234deg, 11%, 52%);
   height: 5.2rem;
   padding: 1rem 2rem 1rem 5rem;
   width: 100%;
@@ -106,7 +103,6 @@ img {
 }
 
 .items__checkbox {
-  border: 2px solid hsl(237deg, 14%, 26%);
   border-radius: 50%;
   height: 2rem;
   position: absolute;
@@ -171,7 +167,6 @@ img {
 }
 
 .items__footer {
-  background-color: hsl(235deg, 24%, 19%);
   border-radius: 0.4rem;
   padding: 1rem 5rem;
   display: flex;
@@ -253,6 +248,53 @@ img {
   margin-top: 4rem;
   color: hsl(234deg, 11%, 52%);
   text-align: center;
+}
+
+.items__input-task--dark {
+  color: hsl(234deg, 11%, 52%);
+  background-color: hsl(235deg, 24%, 19%);
+}
+
+.items__input-task--light {
+  color: hsl(234deg, 11%, 52%);
+  background-color: hsl(0deg, 0%, 98%);
+  border-bottom: 1px solid hsl(234deg, 39%, 85%);
+}
+
+.items__input-new-task--dark {
+  color: hsl(234deg, 11%, 52%);
+  background-color: hsl(235deg, 24%, 19%);
+}
+
+.items__input-new-task--light {
+  color: hsl(234deg, 11%, 52%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.items__footer--dark {
+  color: hsl(234deg, 11%, 52%);
+  background-color: hsl(235deg, 24%, 19%);
+}
+
+.items__footer--light {
+  color: hsl(234deg, 11%, 52%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.bg--light {
+  background-color: hsl(234deg, 39%, 85%);
+}
+
+.bg--dark {
+  background-color: hsl(235deg, 21%, 11%);
+}
+
+.items__checkbox--dark {
+  border: 2px solid hsl(237deg, 14%, 26%);
+}
+
+.items__checkbox--light {
+  border: 1px solid hsl(234deg, 39%, 85%);
 }
 
 /*# sourceMappingURL=style.css.map */

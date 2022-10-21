@@ -14,16 +14,15 @@
 }
 
 .items__input-new-task {
-    background-color: $VeryDarkDesaturatedBlue;
     border-radius: 0.4rem;
     border: none;
-    color: $DarkGrayishBlue;
     height: 5.2rem;
     padding: 1rem 2rem 1rem 5rem;
     width: 100%;
     outline: none;
-
 }
+
+
 
 
 .items__new-task {
@@ -35,7 +34,6 @@
 }
 
 .items__checkbox {
-    border: 2px solid $VeryDarkGrayishBlue;
     border-radius: 50%;
     height: 2rem;
     position: absolute;
@@ -121,7 +119,6 @@
 
 
 .items__footer {
-    background-color: $VeryDarkDesaturatedBlue;
     border-radius: 0.4rem;
     padding: 1rem 5rem;
     display: flex;
@@ -229,4 +226,59 @@
     margin-top: 4rem;
     color: $DarkGrayishBlue;
     text-align: center;
+}
+
+
+.items__input-task--dark {
+    color: $DarkGrayishBlue;
+    background-color: $VeryDarkDesaturatedBlue;
+}
+
+.items__input-task--light {
+    color: $DarkGrayishBlue;
+    background-color: $VeryLightGray;
+    border-bottom: 1px solid $LightGrayishBlue;
+}
+
+
+.items__input-new-task--dark {
+    color: $DarkGrayishBlue;
+    background-color: $VeryDarkDesaturatedBlue;
+
+}
+
+.items__input-new-task--light {
+    color: $DarkGrayishBlue;
+    background-color: $VeryLightGray;
+}
+
+
+.items__footer--dark {
+    color: $DarkGrayishBlue;
+    background-color: $VeryDarkDesaturatedBlue;
+
+}
+
+.items__footer--light {
+    color: $DarkGrayishBlue;
+    background-color: $VeryLightGray;
+}
+
+.bg--light {
+    background-color: $LightGrayishBlue;
+
+}
+
+.bg--dark {
+
+    background-color: $VeryDarkBlue;
+}
+
+
+.items__checkbox--dark {
+    border: 2px solid $VeryDarkGrayishBlue;
+}
+
+.items__checkbox--light {
+    border: 1px solid $LightGrayishBlue;
 }
