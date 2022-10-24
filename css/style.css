@@ -39,7 +39,6 @@ img {
 
 .header {
   align-items: center;
-  background-image: url(/images/bg-mobile-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -51,12 +50,20 @@ img {
 @media (min-width: 375px) {
   .header {
     align-items: center;
-    background-image: url(/images/bg-desktop-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+.header--dark {
+  background-image: url(/images/bg-mobile-dark.jpg);
+}
+
+@media (min-width: 375px) {
+  .header--dark {
+    background-image: url(/images/bg-desktop-dark.jpg);
   }
 }
 .header__title {
@@ -70,6 +77,15 @@ img {
   width: 2.2rem;
 }
 
+.header--light {
+  background-image: url(/images/bg-mobile-light.jpg);
+}
+
+@media (min-width: 375px) {
+  .header--light {
+    background-image: url(/images/bg-desktop-light.jpg);
+  }
+}
 .main {
   align-items: center;
   display: flex;
@@ -176,7 +192,6 @@ img {
 }
 
 .items__task-footer {
-  background-color: hsl(235deg, 24%, 19%);
   border: none;
   color: hsl(234deg, 11%, 52%);
   height: 5.2rem;
@@ -186,6 +201,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.items__task-footer--dark {
+  background-color: hsl(235deg, 24%, 19%);
+}
+
+.items__task-footer--light {
+  background-color: hsl(0deg, 0%, 98%);
 }
 
 @media (min-width: 600px) {

@@ -1,6 +1,5 @@
 .header {
     align-items: center;
-    background-image: url(/images/bg-mobile-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -12,7 +11,6 @@
 @media (min-width:375px) {
     .header {
         align-items: center;
-        background-image: url(/images/bg-desktop-dark.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
@@ -21,7 +19,15 @@
     }
 }
 
+.header--dark {
+    background-image: url(/images/bg-mobile-dark.jpg);
+}
 
+@media (min-width:375px) {
+    .header--dark {
+        background-image: url(/images/bg-desktop-dark.jpg);
+    }
+}
 
 .header__title {
     color: white;
@@ -33,4 +39,15 @@
 
 .header__btn-theme {
     width: 2.2rem;
+}
+
+
+.header--light {
+    background-image: url(/images/bg-mobile-light.jpg);
+}
+
+@media (min-width:375px) {
+    .header--light {
+        background-image: url(/images/bg-desktop-light.jpg);
+    }
 }

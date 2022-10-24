@@ -128,7 +128,6 @@
 }
 
 .items__task-footer {
-    background-color: $VeryDarkDesaturatedBlue;
     border: none;
     color: $DarkGrayishBlue;
     height: 5.2rem;
@@ -139,6 +138,14 @@
     align-items: center;
     justify-content: space-between;
 
+}
+
+.items__task-footer--dark {
+    background-color: $VeryDarkDesaturatedBlue;
+}
+
+.items__task-footer--light {
+    background-color: $VeryLightGray;
 }
 
 @media (min-width:600px) {

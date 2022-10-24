@@ -246,10 +246,10 @@ function changeTheme() {
   //Change icon
   changeIconTheme();
 
-  console.log(theme);
   changeColorInputNewTask(theme);
   changeColorItemsFooter(theme);
   changeColorBody(theme);
+  changeBgImage(theme);
   showTasks(tasks);
 }
 
@@ -268,16 +268,21 @@ function changeColorInputNewTask(theme) {
 }
 
 function changeColorItemsFooter(theme) {
-  let itemsFooter = document.querySelector(".items__footer");
+  const itemsFooter = document.querySelector(".items__footer");
+  const itemsTaskFooter = document.querySelector(".items__task-footer");
 
   if (theme === "dark") {
     itemsFooter.classList.remove("items__footer--light");
     itemsFooter.classList.add("items__footer--dark");
+    itemsTaskFooter.classList.remove("items__task-footer--light");
+    itemsTaskFooter.classList.add("items__task-footer--dark");
   }
 
   if (theme === "light") {
     itemsFooter.classList.add("items__footer--light");
     itemsFooter.classList.remove("items__footer--dark");
+    itemsTaskFooter.classList.add("items__task-footer--light");
+    itemsTaskFooter.classList.remove("items__task-footer--dark");
   }
 }
 
@@ -326,5 +331,19 @@ function changeColorBody(theme) {
   if (theme === "light") {
     body.classList.add("bg--light");
     body.classList.remove("bg--dark");
+  }
+}
+
+function changeBgImage(theme) {
+  const headerHTML = document.querySelector(".header");
+
+  if (theme === "dark") {
+    headerHTML.classList.remove("header--light");
+    headerHTML.classList.add("header--dark");
+  }
+
+  if (theme === "light") {
+    headerHTML.classList.add("header--light");
+    headerHTML.classList.remove("header--dark");
   }
 }
