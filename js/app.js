@@ -150,7 +150,9 @@ function deleteTask(e) {
   showTasks(tasks);
 }
 
-function clearCompleted() {
+function clearCompleted(e) {
+  e.preventDefault();
+
   tasks = tasks.filter((task) => task.status === false);
 
   showTasks(tasks);
@@ -192,6 +194,8 @@ function filterCompleted(tasks) {
 
 // Filter tasks by their status
 function filter(e) {
+  e.preventDefault();
+
   if (e === undefined || e.type === "DOMContentLoaded") {
     showTasks(tasks);
     colorSelectFilter(e);
