@@ -77,9 +77,9 @@ function showTasks(tasks) {
 
     if (!status) {
       html += `
-            <div class="items__task" id="${id}">
+            <div onkeyup="changeValueTask(this)" class="items__task" id="${id}">
                 <label id="checkbox" class="items__checkbox items__checkbox--${theme}"></label>
-                <input value="${description}" class="items__input-task items__input-task--${theme}" type="text" name="" id="" placeholder="Create a new todo" />
+                <input  value="${description}" class="items__input-task items__input-task--${theme}" type="text" name="" id="" placeholder="Create a new todo" />
                 <div id="btn-delete" class="items__delete"></div>
             </div>       
         
@@ -88,9 +88,9 @@ function showTasks(tasks) {
       tasksDiv.innerHTML = html;
     } else {
       html += `
-            <div class="items__task" id="${id}">
+            <div onkeyup="changeValueTask(this)" class="items__task" id="${id}">
                 <label id="checkbox" class="items__checkbox checkbox-active items__checkbox--${theme}"></label>
-                <input value="${description}" class="items__input-task items__input-task--active items__input-task--${theme}" type="text" name="" id="" placeholder="Create a new todo" />
+                <input  value="${description}" class="items__input-task items__input-task--active items__input-task--${theme}" type="text" name="" id="" placeholder="Create a new todo" />
                 <div id="btn-delete" class="items__delete"></div>
             </div>       
         
@@ -350,4 +350,19 @@ function changeBgImage(theme) {
     headerHTML.classList.add("header--light");
     headerHTML.classList.remove("header--dark");
   }
+}
+
+// Update task value
+function changeValueTask(element) {
+  const id = Number(element.id);
+  const description = element.querySelector("input").value;
+
+  tasks = tasks.map((task) => {
+    if (task.id == id) {
+      task.description = description;
+      return task;
+    } else {
+      return task;
+    }
+  });
 }
