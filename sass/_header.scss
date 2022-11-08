@@ -20,12 +20,12 @@
 }
 
 .header--dark {
-    background-image: url(/images/bg-mobile-dark.jpg);
+    background-image: url(images/bg-mobile-dark.jpg);
 }
 
 @media (min-width:375px) {
     .header--dark {
-        background-image: url(/images/bg-desktop-dark.jpg);
+        background-image: url(images/bg-desktop-dark.jpg);
     }
 }
 
