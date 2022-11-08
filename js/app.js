@@ -316,10 +316,10 @@ function changeIconTheme() {
   let srcIcon = iconTheme.src;
 
   if (srcIcon === `${url}images/icon-sun.svg`) {
-    iconTheme.src = `/images/icon-moon.svg`;
+    iconTheme.src = `images/icon-moon.svg`;
     theme = "light";
   } else {
-    iconTheme.src = `/images/icon-sun.svg`;
+    iconTheme.src = `images/icon-sun.svg`;
     theme = "dark";
   }
 }
